@@ -14,7 +14,6 @@ project_name = 'WineQualityPrediction_with_MLflow'
 
 ## creating list as 'list_of_files'
 ## list_of_files is responsible for creating project folders
-## folders consists of __init__ constructors which are responsible for creating folders as a local packages so that we can importing the functions.
 
 list_of_files = [
     ".github/workflows/.gitkeep",
