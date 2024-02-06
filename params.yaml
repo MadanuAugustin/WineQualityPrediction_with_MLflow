@@ -1,0 +1,3 @@
+# yaml files should not be empty which throws an error
+
+key : val

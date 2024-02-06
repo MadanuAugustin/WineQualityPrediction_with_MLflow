@@ -8,19 +8,16 @@ import yaml
 from src.WineQualityPrediction_with_MLflow import logger
 import json
 import joblib
-from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
-
-
 
 ## BoxValueError is a exception handler instead of creating custom exception
 ## after reading the yaml file it is returned as ConfigBox
 
 # read_yaml function is used for reading yaml files
 
-@ensure_annotations
+
 def read_yaml(path_to_yaml:Path) -> ConfigBox:
     # """
     # reads yaml files and returns
@@ -48,7 +45,7 @@ def read_yaml(path_to_yaml:Path) -> ConfigBox:
 
 
 
-@ensure_annotations
+
 def create_directories(path_to_directories: list, verbose = True):
     # """
     # create list of directories
@@ -64,7 +61,7 @@ def create_directories(path_to_directories: list, verbose = True):
             logger.info(f"created directory at : {path}")
 
 
-@ensure_annotations
+
 def save_json(path : Path, data : dict):
     # """
     # save json data
@@ -80,7 +77,7 @@ def save_json(path : Path, data : dict):
     logger.info(f"json file saved at : {path}")
 
 
-@ensure_annotations
+
 def load_json(path : Path) -> ConfigBox:
     # """
     # load json files data
@@ -101,7 +98,7 @@ def load_json(path : Path) -> ConfigBox:
 
     return ConfigBox(content)
 
-@ensure_annotations
+
 def save_bin(data : Any, path : Path):
     # """
     # save binary file
@@ -115,7 +112,7 @@ def save_bin(data : Any, path : Path):
     logger.info(f"binary file saved at : {path}")
 
 
-@ensure_annotations
+
 def load_bin(path : Path) -> Any:
     # """
     # load binary data
@@ -131,18 +128,17 @@ def load_bin(path : Path) -> Any:
     logger.info(f"binary file loaded from {path}")
     return data
 
-@ensure_annotations
-def get_size(path: Path) -> str:
-    # """
-    # get size in KB
 
-    # Args :
-    #     path (Path) : path of the file
+def get_size(path: Path) -> str:
+    # """get size in KB
+
+    # Args:
+    #     path (Path): path of the file
 
     # Returns:
-    #     str : size in KB
+    #     str: size in KB
     # """
-    size_in_kb = round(os.path.getsize(path/1024))
-    return f"~{size_in_kb} KB"
+    size_in_kb = round(os.path.getsize(path)/1024)
+    return f"~ {size_in_kb} KB"
     
 

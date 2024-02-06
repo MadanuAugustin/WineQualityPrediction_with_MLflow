@@ -9,4 +9,8 @@ artifacts_root : artifacts
 
 data_ingestion:
   # then again creating data_ingestion folder inside the artifacts
-  root_dir: artifacts/data_ingestion
+  root_dir: artifacts//data_ingestion
+  # In future if we want to change the dataset we can just change the below link in config.yaml file instead of chaning the code in components
+  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/winequality-data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
