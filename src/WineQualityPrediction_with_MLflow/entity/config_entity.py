@@ -18,3 +18,9 @@ class DataValidationConfig:
     STATUS_FILE : str
     # I want to read the schema.yaml file and save the data as a dictionary format
     all_schema : dict
+
+
+@dataclass
+class DataTransformationConfig:
+    root_dir : Path
+    data_path : Path

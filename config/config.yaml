@@ -23,3 +23,8 @@ data_validation:
   # Then only we will be starting the training pipelines only when the data is in correct format which saves the computational cost
   # Here we will be doing the schema.yaml validation
   STATUS_FILE : artifacts//data_validation//status.txt
+
+
+data_transformation:
+  root_dir : artifacts//data_transformation
+  data_path : artifacts//data_ingestion//winequality-red.csv
