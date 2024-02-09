@@ -1,6 +1,6 @@
 # yaml files should not be empty which throws an error
 # schema is nothing but how many columns our data is having and its data types and column names
-key : val
+
 
 
 COLUMNS:
