@@ -24,3 +24,15 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir : Path
     data_path : Path
+
+
+@dataclass
+class ModelTrainerConfig:
+    root_dir : Path
+    train_data_path : Path
+    test_data_path : Path
+    model_name : str
+    # the below model parameters are need to be defined in params.yaml file
+    alpha : float
+    l1_ratio : float
+    target_column : str
