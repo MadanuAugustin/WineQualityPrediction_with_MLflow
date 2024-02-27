@@ -53,6 +53,8 @@ Now,
 open up you local host and port
 ```
 
+## Experiments & Model_registers
+Link : https://dagshub.com/augustin7766/WineQualityPrediction_with_MLflow.mlflow/#/compare-experiments/s?experiments=%5B%2210%22,%2211%22,%2212%22,%2213%22,%2214%22,%2215%22,%2216%22,%2217%22,%228%22,%229%22%5D&searchFilter=&orderByKey=attributes.start_time&orderByAsc=false&startTime=ALL&lifecycleFilter=Active&datasetsFilter=W10%3D&modelVersionFilter=All%20Runs&selectedColumns=attributes.%60Source%60,attributes.%60Models%60,attributes.%60Dataset%60&compareRunsMode=CHART&compareRunCharts=W3sidXVpZCI6IjE3MDkwNTQ1NDM4NTVodTJwZjgxOSIsInR5cGUiOiJCQVIiLCJydW5zQ291bnRUb0NvbXBhcmUiOjEwLCJtZXRyaWNLZXkiOiJtYWUifSx7InV1aWQiOiIxNzA5MDU0NTQzODU2bXRxeWIzaHoiLCJ0eXBlIjoiQkFSIiwicnVuc0NvdW50VG9Db21wYXJlIjoxMCwibWV0cmljS2V5IjoicjIifSx7InV1aWQiOiIxNzA5MDU0NTQzODU2OTRkaTQ4MnkiLCJ0eXBlIjoiQkFSIiwicnVuc0NvdW50VG9Db21wYXJlIjoxMCwibWV0cmljS2V5Ijoicm1zZSJ9LHsidXVpZCI6IjE3MDkwNTQ3ODg2OTVucnNudGF1NiIsInR5cGUiOiJQQVJBTExFTCIsInJ1bnNDb3VudFRvQ29tcGFyZSI6MTAsInNlbGVjdGVkUGFyYW1zIjpbImwxX3JhdGlvIiwiYWxwaGEiXSwic2VsZWN0ZWRNZXRyaWNzIjpbInIyIiwicm1zZSIsIm1hZSJdfV0%3D
 
 ## MLflow
 
