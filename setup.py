@@ -15,5 +15,4 @@ setup(
     long_description=long_description,
     url = 'https://github.com/MadanuAugustin/WineQualityPrediction_with_MLflow.git',
     packages = find_packages()
-
 )

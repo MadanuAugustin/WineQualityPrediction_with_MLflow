@@ -3,13 +3,13 @@ import pandas as pd
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from urllib.parse import urlparse
 import mlflow
-import mlflow.sklearn
 import numpy as np
 import joblib
-mlflow.autolog()
 from src.WineQualityPrediction_with_MLflow.entity.config_entity import ModelEvaluationConfig
 from src.WineQualityPrediction_with_MLflow.utils.common import save_json
 from pathlib import Path
+import os
+import dagshub
 
 
 class ModelEvaluation:
@@ -33,11 +33,23 @@ class ModelEvaluation:
         test_x = test_data.drop([self.config.target_column], axis=1)
         test_y = test_data[[self.config.target_column]]
 
+        os.environ["MLFLOW_TRACKING_URI"]='https://dagshub.com/augustin7766/WineQualityPrediction_with_MLflow.mlflow'
+        os.environ["MLFLOW_TRACKING_USERNAME"]="augustin7766"
+        os.environ["MLFLOW_TRACKING_PASSWORD"]="8a01ee4bec043666cf3ced22edc7d308526b4b42"
+
+
+        # mlflow.set_tracking_uri = self.config.mlflow_uri
 
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
-        mlflow.autolog()
+        mlflow.set_experiment("/exp_10")
+
+        
+
+        # dagshub.init(repo_owner='augustin7766', repo_name='WineQualityPrediction_with_MLflow', mlflow=True)
+
+        
         with mlflow.start_run():
 
             predicted_qualities = model.predict(test_x)
@@ -54,6 +66,9 @@ class ModelEvaluation:
             mlflow.log_metric("r2", r2)
             mlflow.log_metric("mae", mae)
 
+            # mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+
+
 
             # Model registry does not work with file store
             if tracking_url_type_store != "file":
@@ -67,3 +82,4 @@ class ModelEvaluation:
                 mlflow.sklearn.log_model(model, "model")
 
     
+

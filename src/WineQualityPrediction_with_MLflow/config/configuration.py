@@ -103,7 +103,7 @@ class ConfigurationManager:
             all_params = params,
             metric_file_name = config.metric_file_name,
             target_column = schema.name,
-            mlflow_uri = 'https://dagshub.com//augustin7766//WineQualityPrediction_with_MLflow.mlflow'
+            mlflow_uri = 'https://dagshub.com/augustin7766/WineQualityPrediction_with_MLflow.mlflow'
         )
 
         return model_evaluation_config

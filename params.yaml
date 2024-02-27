@@ -1,5 +1,5 @@
 # yaml files should not be empty which throws an error
 
 ElasticNet:
-  alpha : 0.9
-  l1_ratio : 0.8
+  alpha : 0.1
+  l1_ratio : 0.9
